@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:movie_app/models/movie_model.dart';
 import 'package:movie_app/services/api_services.dart';
 import 'package:movie_app/widgets/custom_card_thumbnail.dart';
@@ -11,6 +12,7 @@ class NowPlayingList extends StatefulWidget {
 }
 
 class _NowPlayingListState extends State<NowPlayingList> {
+  PageController pageController = PageController(viewportFraction: 0.9);
   ApiServices apiService = ApiServices();
   List<Movie> movies = [];
 
